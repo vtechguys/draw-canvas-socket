@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-server.listen(4500);
+server.listen(process.env.PORT || 4500);
 
 io.on('connection', function (socket) {
   socket.on('iStartedDrawing', function (data) {
