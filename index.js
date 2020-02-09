@@ -7,11 +7,11 @@ var path = require('path');
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(path.join(__dirname, 'public', 'index.html');
 });
-
-server.listen(process.env.PORT || 4500);
-
+const PORT = process.env.PORT || 4500
+server.listen(PORT);
+console.log('\n\n', PORT);
 io.on('connection', function (socket) {
   socket.on('iStartedDrawing', function (data) {
     socket.broadcast.emit('someoneStartedDrawing', data);
