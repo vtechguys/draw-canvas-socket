@@ -1,2 +1,2 @@
-var socket = io.connect('https://draw-canvas-socket.herokuapp.com/');
+var socket = io.connect('https://draw-canvas-socket.herokuapp.com');
 
